@@ -1,0 +1,8 @@
+{
+  "name": "zeus",
+  "version": "0.1.0",
+  "main": "index.js",
+  "repository": "git@github.com:ocarrasco03/zeus.git",
+  "author": "Oscar Carrasco <oscar.hcarrasco03@gmail.com>",
+  "license": "MIT"
+}
