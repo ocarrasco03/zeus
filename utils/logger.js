@@ -11,7 +11,10 @@ const path = 'logs'
  *
  * @param {string} type error|request|response
  * @param {string} name file name without extension
- * @param {object} [options={exception: '', params: '', url: ''}] [options={exception: '', params: '', url: ''}]
+ * @param {Object} options
+ * @param {*=} options.exception
+ * @param {Object=} options.params
+ * @param {string=} options.url
  */
 
 exports.Log = (
@@ -76,12 +79,13 @@ exports.Log = (
 
 /**
  * Slack logger this function sends all los to a slack channel
- *
  * @param {string} type error|success|alert|note
  * @param {string} title Title of the message
- * @param {string} message
- * @param {object} [options={ color: "#bb2124", icon: ":beetle:" }] { color: '#bb2124', icon: ':beetle:' }
- * @param {*} [exception=null] Exception message
+ * @param {string} message Log message
+ * @param {Object} options Configuration message options
+ * @param {string=} options.color Attachments color hex config
+ * @param {string=} options.icon Icon message config example :beetle:
+ * @param {*=} exception Exception message
  */
 exports.LogSlack = (
   type,
